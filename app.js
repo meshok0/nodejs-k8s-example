@@ -3,8 +3,8 @@ const ns = process.env.NAMESPACE || 'default';
 const util = require('util')
 const k8s = require('@kubernetes/client-node');
 const kc = new k8s.KubeConfig();
-kc.loadFromDefault();
-//kc.loadFromCluster();
+kc.loadFromDefault(); // if running locally (requires kubeconfig setted up)
+//kc.loadFromCluster(); // if running in k8s cluster
 const k8sBatchApi = kc.makeApiClient(k8s.BatchV1Api);
 
 async function sleep(ms) {
