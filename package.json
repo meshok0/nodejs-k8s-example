@@ -1,0 +1,8 @@
+{
+  "name": "nodejs-k8s-example",
+  "version": "0.1.0",
+  "main": "app.js",
+  "dependencies": {
+    "@kubernetes/client-node": "^0.11.1"
+  }
+}
